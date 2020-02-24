@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+
+// USUARIOS
+/**
+ 1.- Encriptar Clave del usuario
+ 2.- No devolver la clave del usuario
+ 3.- Actualizar clave del usuario con validación
+ 4.- Devolver los equipos a los que pertenece el usuario.
+ */
+let usuario1 = {
+	"nombre": "Daniel",
+	"apellido": "Boggiano Sáenz",
+	"correo": "danielboggianos@gmail.com",
+	"imagen": "http://138.197.196.196/api/imagenes/11.jpg",
+	"password": "Admin_123456"
+}
+let usuario2 = {
+	"nombre": "Yonarkis",
+	"apellido": "Linares",
+	"correo": "yonarkis.linares@gmail.com",
+	"imagen": "http://138.197.196.196/api/imagenes/47.jpg",
+	"password": "Admin_123456"
+}
+
+// EQUIPOS
+let equipo = {
+    "nombre": "Los Leones",
+    "descripcion":"Los programadores que rugen",
+    "imagen": "https://elpais.com/elpais/imagenes/2018/07/05/mundo_animal/1530807624_819439_1530813771_noticia_grande.jpg",
+    "lider": 1,
+}
+
+// EQUIPOS USUARIOS
+/*
+1.- Consultar a qué equipos pertene un usuario
+2.- Consultar los usuarios de un equipo
+*/
+let equipos_usuarios = {
+    "equipo":[1,1],
+    "usuario":[1,2],
+}
+
+
+
+// TAREAS
+let tarea = {
+    "proyecto": 1,
+    "tareaPadre": null,
+    "creador": 1,
+    "estado": 1,
+    "titulo": "Modelar Bases de Datos",
+    "descripcion": "Primero debo crear el esquema de forma gráfica y luego subirlo a la base de datos",
+    "inicio": null,
+    "final": null,
+    "tiempo": "05:00",
+    "duracion":null,
+}
+let subtarea1 = {
+    "proyecto": 1,
+    "tareaPadre": 1,
+    "creador": 1,
+    "estado": 1,
+    "titulo": "Crear Tabla de Usuarios",
+    "descripcion": "Especificar cada uno de los campos de la tabal",
+    "tiempo": "00:30",
+    "inicio": null,
+    "final": null,
+    "duracion":null,
+}
+
+// PROYECTOS 
+let proyecto = {
+    "creador": 1,
+    "equipo": 1,
+    "estado": 1,
+    "titulo": "Mi Primer Proyecto",
+    "descripcion": "Proyecto de prueba",
+    "fecha": "2020-02-25",
+    "tiempo": "50:00",
+    "horasProduccion": 8,
+    "duracion":null,
+    "inicio": null,
+    "final": null,
+}
+
+let teams= [
+    {
+        "equipo": 1,
+        "usuario": 1
+    },
+    {
+        "equipo": 1,
+        "usuario": 2
+    },
+    {
+        "equipo": 1,
+        "usuario": 3
+    },
+    {
+        "equipo": 2,
+        "usuario": 5
+    },
+    {
+        "equipo": 2,
+        "usuario": 8
+    },
+    {
+        "equipo": 2,
+        "usuario": 4
+    }
+]
+// appDiv.innerHTML = JSON.stringify(teams);
+
+
+function compare(a, b){
+    if(a===b) return true;
+    else return false;
+}
+
+let equipos=[];
+let e=[];
+e.push(teams[0].equipo);
+for(let i=0; i<teams.length; i++){
+    if(teams[i+1] && !compare(teams[i].equipo, teams[i+1].equipo))
+        e.push(teams[i+1].equipo);
+}
+e.forEach(n=>equipos.push({equipo:n,usuarios: teams.filter(t=>t.equipo == n).map(t=>t.usuario)}));
+
+let equipos_con_usuarios = {
+    "nombre": "Los Leones",
+    "descripcion": "Los programadores que rugen",
+    "imagen": "https://elpais.com/elpais/imagenes/2018/07/05/mundo_animal/1530807624_819439_1530813771_noticia_grande.jpg",
+    "lider": 1,
+    "usuarios": {
+        "nombre": "Daniel",
+        "apellido": "Boggiano Sáenz",
+        "correo": "danielboggianos@gmail.com",
+        "password": "Amdin_123456"
+    }
+}
+
+</script>
