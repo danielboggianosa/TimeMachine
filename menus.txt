@@ -1,0 +1,277 @@
+{
+    "msg": "Menu creado correctamente",
+    "data": [
+        {
+            "id": 1,
+            "rol": "Administrador",
+            "createdAt": "2020-03-09T01:00:38.638Z",
+            "updatedAt": "2020-03-09T01:00:38.638Z"
+        },
+        {
+            "id": 2,
+            "rol": "Responsable",
+            "createdAt": "2020-03-09T01:00:38.638Z",
+            "updatedAt": "2020-03-09T01:00:38.638Z"
+        },
+        {
+            "id": 3,
+            "rol": "Lider",
+            "createdAt": "2020-03-09T01:00:38.638Z",
+            "updatedAt": "2020-03-09T01:00:38.638Z"
+        },
+        {
+            "id": 4,
+            "rol": "Usuario",
+            "createdAt": "2020-03-09T01:00:38.638Z",
+            "updatedAt": "2020-03-09T01:00:38.638Z"
+        },
+        {
+            "id": 5,
+            "rol": "Visitante",
+            "createdAt": "2020-03-09T01:00:38.638Z",
+            "updatedAt": "2020-03-09T01:00:38.638Z"
+        }
+    ]
+}
+
+{
+    "msg": "Menu creado correctamente",
+    "data": [
+        {
+            "id": 6,
+            "createdAt": "2020-03-09T01:03:45.675Z",
+            "updatedAt": "2020-03-09T01:03:45.675Z"
+        },
+        {
+            "id": 7,
+            "createdAt": "2020-03-09T01:03:45.675Z",
+            "updatedAt": "2020-03-09T01:03:45.675Z"
+        },
+        {
+            "id": 8,
+            "createdAt": "2020-03-09T01:03:45.675Z",
+            "updatedAt": "2020-03-09T01:03:45.675Z"
+        }
+    ]
+}
+
+{
+    "msg": "Menu creado correctamente",
+    "data": [
+        {
+            "id": 1,
+            "titulo": "Dashboard",
+            "icon": "fas fa-fw fa-tachometer-alt",
+            "link": "/dashboard",
+            "permiso": 1,
+            "subtitulo": "",
+            "grupo": 1,
+            "createdAt": "2020-03-09T01:16:48.856Z",
+            "updatedAt": "2020-03-09T01:16:48.856Z"
+        },
+        {
+            "id": 2,
+            "titulo": "Components",
+            "icon": "fas fa-fw fa-cog",
+            "link": "",
+            "permiso": 1,
+            "subtitulo": "Custom Components",
+            "grupo": 2,
+            "createdAt": "2020-03-09T01:16:48.856Z",
+            "updatedAt": "2020-03-09T01:16:48.856Z"
+        },
+        {
+            "id": 3,
+            "titulo": "Buttons",
+            "link": "buttons",
+            "permiso": 1,
+            "createdAt": "2020-03-09T01:16:48.856Z",
+            "updatedAt": "2020-03-09T01:16:48.856Z"
+        },
+        {
+            "id": 4,
+            "titulo": "Cards",
+            "link": "cards",
+            "permiso": 1,
+            "createdAt": "2020-03-09T01:16:48.856Z",
+            "updatedAt": "2020-03-09T01:16:48.856Z"
+        }
+    ]
+}
+
+[
+	{
+		"titulo": "Dashboard",
+		"icon":"fas fa-fw fa-tachometer-alt",
+		"link": "/dashboard",
+		"permiso":1,
+		"subtitulo":"",
+		"grupo":1
+	},
+	{
+		"titulo": "Components",
+		"icon":"fas fa-fw fa-cog",
+		"link": "",
+		"permiso":1,
+		"subtitulo": "Custom Components",
+		"grupo":2,
+		"submenus":[
+			{
+				"titulo":"Buttons",
+				"link":"buttons",
+				"permiso":1
+			},
+			{
+				"titulo":"Cards",
+				"link":"cards",
+				"permiso":1
+			}
+		]
+	}
+	
+]
+
+{
+    "msg": "Menu creado correctamente",
+    "data": [
+        {
+            "id": 7,
+            "titulo": "Utilitis",
+            "icon": "fas fa-fw fa-wrench",
+            "link": "",
+            "permiso": 1,
+            "subtitulo": "Custom Utilitis",
+            "grupo": 2,
+            "submenus": [
+                {
+                    "id": 12,
+                    "titulo": "Colors",
+                    "link": "colors",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 13,
+                    "titulo": "Borders",
+                    "link": "borders",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 14,
+                    "titulo": "Animations",
+                    "link": "animations",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 15,
+                    "titulo": "Other",
+                    "link": "other",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                }
+            ],
+            "createdAt": "2020-03-09T01:55:47.064Z",
+            "updatedAt": "2020-03-09T01:55:47.064Z"
+        },
+        {
+            "id": 8,
+            "titulo": "Pages",
+            "icon": "fas fa-fw fa-folder",
+            "link": "",
+            "permiso": 1,
+            "subtitulo": "Pages",
+            "grupo": 3,
+            "submenus": [
+                {
+                    "id": 16,
+                    "titulo": "Login",
+                    "link": "/login",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 17,
+                    "titulo": "Register",
+                    "link": "/register",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 18,
+                    "titulo": "Forgot Password",
+                    "link": "/recover",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 19,
+                    "titulo": "Profile",
+                    "link": "profile",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 20,
+                    "titulo": "404 Page",
+                    "link": "unknown",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                },
+                {
+                    "id": 21,
+                    "titulo": "Blankr",
+                    "link": "blank",
+                    "permiso": 1,
+                    "createdAt": "2020-03-09T01:55:47.064Z",
+                    "updatedAt": "2020-03-09T01:55:47.064Z"
+                }
+            ],
+            "createdAt": "2020-03-09T01:55:47.064Z",
+            "updatedAt": "2020-03-09T01:55:47.064Z"
+        },
+        {
+            "id": 9,
+            "titulo": "Charts",
+            "icon": "fas fa-fw fa-cart-area",
+            "link": "charts",
+            "permiso": 1,
+            "subtitulo": "",
+            "grupo": 3,
+            "createdAt": "2020-03-09T01:55:47.064Z",
+            "updatedAt": "2020-03-09T01:55:47.064Z"
+        },
+        {
+            "id": 10,
+            "titulo": "Tables",
+            "icon": "fas fa-fw fa-cart-table",
+            "link": "table",
+            "permiso": 1,
+            "subtitulo": "",
+            "grupo": 3,
+            "createdAt": "2020-03-09T01:55:47.064Z",
+            "updatedAt": "2020-03-09T01:55:47.064Z"
+        },
+        {
+            "id": 11,
+            "titulo": "Forms",
+            "icon": "fas fa-fw fa-folder",
+            "link": "forms",
+            "permiso": 1,
+            "subtitulo": "",
+            "grupo": 3,
+            "createdAt": "2020-03-09T01:55:47.064Z",
+            "updatedAt": "2020-03-09T01:55:47.064Z"
+        }
+    ]
+}
