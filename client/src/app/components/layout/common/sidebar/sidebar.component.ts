@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { LayoutService } from 'src/app/services/layout.service';
-import { SubSink } from 'subsink';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,22 +6,34 @@ import { SubSink } from 'subsink';
   styles: []
 })
 export class SidebarComponent implements OnInit {
-  subs = new SubSink;
-  webTitulo='Time Machine';
-  webTituloSup="1"
+  @Input() webTitulo='SB Admin';
+  @Input() webTituloSup='';
+  @Input() webIcono="fab fa-3x fa-angular";
   @ViewChild('accordionSidebar', {static:true}) accordionSidebar;
   // MENU EXAMPLE STRUCTURE DATA
-  menuGroups;
+  @Input() menuGroups=[
+    {id: 1, title: '', permission:'', menu:[
+      {id:1, title: 'Dashboard', icon:'fas fa-fw fa-tachometer-alt', link: '/dashboard', permission:'', subtitle: '', submenu:[]},
+    ]},
+    {id: 2, title: 'Interface', permission:'', menu:[
+      {id:2, title: 'Objetivos', icon:'fas fa-fw fa-bullseye', link: '', permission:'', subtitle: 'Acciones', submenu:[
+        {id:3, title:'Ver', link:'objetivos/ver', permission:''},
+        {id:4, title:'Crear', link:'objetivos/crear', permission:'' },
+        {id:6, title:'Asociar', link:'objetivos/asociar', permission:'' },
+      ]},
+      {id:5, title: 'Creencias', icon:'fas fa-fw fa-brain', link: '', permission:'', subtitle: 'Custom Utilities', submenu:[
+        {id:7, title:'Ver', link:'creencias', permission:'' },
+        {id:8, title:'Crear', link:'creencias/crear', permission:'' },
+      ]},
+    ]}
+  ]
   activeSubmenu: string;
   group: any;
   menu: any;
 
-  constructor(private layoutService:LayoutService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.subs.sink = this.layoutService.getMenu().subscribe(
-      res=>this.menuGroups=res
-    )
   }
 
   toggle(){

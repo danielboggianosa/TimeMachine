@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { Usuario } from 'src/app/models/Usuario';
 
 @Component({
   selector: 'app-user-info',
@@ -7,22 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInfoComponent implements OnInit {
 
-  usuario:{
-    nombre:string;
-    apellido:string;
-    imagen:string;
-    correo:string;
-  }
-
-  constructor() { }
+  @Input() user:Usuario
+  constructor(private router:Router, private auth:AuthService) { }
 
   ngOnInit(): void {
-    this.usuario={
-      nombre: sessionStorage.getItem('user.nombre'),
-      apellido: sessionStorage.getItem('user.apellido'),
-      imagen: sessionStorage.getItem('user.imagen'),
-      correo: sessionStorage.getItem('user.correo')
-    }
+    
   }
+
+  logout(){
+    this.auth.sessionDestroy()
+  }
+
 
 }

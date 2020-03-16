@@ -3,8 +3,8 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/dashboard">
-      <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fab fa-angular"></i>
+      <div class="sidebar-brand-icono rotate-n-15">
+        <i class="{{webIcono}}"></i>
       </div>
       <div class="sidebar-brand-text mx-3">{{webTitulo}} <sup>{{webTituloSup}}</sup></div>
     </a>
@@ -22,7 +22,7 @@
         <!-- MENU SIN SUBMENU -->
         <div *ngIf="menu.link!=''">  
           <a class="nav-link" routerLink="{{menu.link}}">
-            <i class="{{menu.icon}}"></i>
+            <i class="{{menu.icono}}"></i>
             <span>{{menu.titulo}}</span>
           </a>
         </div>
@@ -30,14 +30,14 @@
         <!-- MENU CON SUBMENU -->
         <div *ngIf="menu.link==''" id="menu_{{menu.id}}">          
           <a class="nav-link collapsed" id="menu_name_{{menu.id}}" data-toggle="collapse" (click)="toggleSubmenu(group.id, menu.id)" style="cursor: pointer;">
-            <i class="{{menu.icon}}"></i>
+            <i class="{{menu.icono}}"></i>
             <span>{{menu.titulo}}</span>
           </a>
           <!-- LISTA DE SUBMENUES -->
-          <div id="submenu_{{menu.id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div id="submenu_{{menu.id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="z-index: 2000;">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">{{menu.subtitulo}}:</h6>
-              <a class="collapse-item"*ngFor="let submenu of menu.submenus" routerLink="{{submenu.link}}">{{submenu.titulo}}</a>
+              <a class="collapse-item"*ngFor="let submenu of menu.submenus" routerLink="{{submenu.link}}" (click)="toggleSubmenu(group.id, menu.id)">{{submenu.titulo}}</a>
             </div>
           </div>
         </div>
